@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# This script is used to convert a CT image into a virtual U-map
 import nibabel as nib
 import argparse
 
