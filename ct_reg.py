@@ -22,7 +22,7 @@ nans= np.isnan(kt)
 # Conversion based on:
 # Carney J P et al. (2006) Med. Phys. 33 976-83
 
-# This is a test change for git tutorial
+# This is a test change for git tutorial.
 
 a = 0.0000564
 b = 0.0408
@@ -41,11 +41,6 @@ u_soft_fixed = 0.1
 u_air = 0.
 kt=10000. * kt
 
-
-#umap = 1000. * (u_air + u_bone+(1-u_bone)* u_soft_fixed)
-#umap = 10000. * (u_air *np.array(air.get_data()) + u_bone + tissu* u_soft_fixed)
-
-#umap = (u_air * np.array(air.get_data()) + u_bone * np.array(bones.get_data()) + (1 - np.array(bones.get_data())) * (1 - np.array(air.get_data())) * u_soft_fixed)
 nans=np.isnan(kt)
 kt[nans] = 0
 save_im = nib.Nifti1Image(kt, affine=ctt.affine,header=ctt.header)
